@@ -29,7 +29,7 @@
                 <button type="submit" class="btn btn-primary btn-block" name="loginBtn">Login</button>
             </form>
             <?php if($user->login_result === true): ?>
-    <div class="alert alert-success">Uspesno logovanje, idi na stranicu <a href="index.php">Blogger post</a></div>
+            <?php header("Location: index.php"); ?>
 <?php elseif ($user->login_result === false): ?>
     <div class="alert alert-danger">Pogrešan email ili lozinka!</div>
 <?php endif; ?>

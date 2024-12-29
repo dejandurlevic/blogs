@@ -33,7 +33,7 @@ class User extends QueryBuilder {
         $query->execute([$email]);
         $loggedUser = $query->fetch(PDO::FETCH_OBJ);
     
-        if ($loggedUser && password_verify($password, $loggedUser->password)) {
+        if ($loggedUser && password_verify($password, $loggedUser->password)) {   
             $_SESSION['loggedUser'] = $loggedUser;
             $this->loggedUser = $loggedUser;
             $this->login_result = true;
